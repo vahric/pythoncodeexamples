@@ -1,0 +1,4 @@
+Trace back is just a term used in Python to indicate syntax error in the code.
+
+Python interpreter will give a smooth warning(i.e.indication) that it is not able to understand the code due to errors in syntax. When we met with a trace back we cannot compile our code to get result.
+It's important to note that Trace back is not at all related to run time and logical errors.

@@ -1,0 +1,81 @@
+
+Why messaging broker -
+
+Publisher (producer) - message sender
+
+Consumer - who gets the message
+
+Exchange - post office or mailbox , its take message and route to queue.
+
+Exchange Types
+
+1) Direct exchange
+2) Fanout exchange
+3) *Topic exchange
+4) Headers exchange
+
+Openstack use topic, topics ;
+    Route message to one or multiple queue based message routing key and pattern.
+
+Queue - Place for store messages to consumer get it.
+    Durable (persisted to disk) and transient queues are available.
+
+Bindings - Relation between exchange and queue. Exchange distribute messages via bindings.
+
+Methods - Each operations have method to access like HTTP for example
+    To declare new topic and set parameters
+        Publisher use "exchange.declare" method with name of exchange , type "Topic" , durable or not !
+    To Broker to Consumer
+        Broker use queue.declare.ok method with name of queue , message count and consumer count
+
+Connections - AMQP protocol use TCP. Use authentication and TLS.
+
+Channel - Connection multiplexed , multiple lightweight connection share single TCP Connection.
+
+Virtual Host - Same as Apache web server provider isolated multiple isolated environment. Think multiple instances which
+    have users,exchange,queue,bindigs.
+
+- Flow -
+
+Publisher -->  Exchange (Exchange Route the message to Queue) -(depend bindings)-> Queue --> Consumer (get the message)
+
+    Good thing is messaging queue is reliable, when you use acknowledgement then until get notification from consumer
+message will be in queue and deleted after consumer notification recieved.
+
+    In some situation message can not be routed then it could be returned , dropped , publisher should handle this.
+
+*To get exchanges
+
+sudo rabbitmqctl list_exchanges
+
+
+*To get queues
+
+sudo rabbitmqctl list_queues
+
+*To get bindings
+
+sudo rabbitmqctl list_bindings
+
+*To get vhosts
+
+sudo rabbitmqctl list_vhosts
+
+Listing vhosts ...
+/
+
+*To see RabbitMQ Cluster Status
+
+sudo rabbitmqctl cluster_status
+
+Cluster status of node 'rabbit@helion-cp1-c1-m1-mgmt' ...
+[{nodes,[{disc,['rabbit@helion-cp1-c1-m1-mgmt','rabbit@helion-cp1-c1-m2-mgmt',
+                'rabbit@helion-cp1-c1-m3-mgmt']}]},
+ {running_nodes,['rabbit@helion-cp1-c1-m3-mgmt',
+                 'rabbit@helion-cp1-c1-m2-mgmt',
+                 'rabbit@helion-cp1-c1-m1-mgmt']},
+ {cluster_name,<<"control-plane-1_rabbit">>},
+ {partitions,[]},
+ {alarms,[{'rabbit@helion-cp1-c1-m3-mgmt',[]},
+          {'rabbit@helion-cp1-c1-m2-mgmt',[]},
+          {'rabbit@helion-cp1-c1-m1-mgmt',[]}]}]

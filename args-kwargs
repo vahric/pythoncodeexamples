@@ -1,0 +1,11 @@
+Sometimes you can see that function variables like
+
+def function_name1(var1,var2)
+
+Sometimes we don't know how many we will get then we will use *args
+
+def def function_name2(*args)
+
+Sometimes also not only single and multiple variable we can get dict or key/valu pairs then we will use **kwargs
+
+def def function_name3(**kwargs)
