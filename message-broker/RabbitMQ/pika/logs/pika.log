@@ -1179,3 +1179,54 @@ INFO:root:b'{"_context_domain": null, "_context_roles": [], "event_type": "audit
 2018-01-07 22:43:17,678 Connection to 10.111.45.51:5672 failed: timeout
 2018-01-07 22:43:17,678 Connecting to 10.111.45.51:5672
 2018-01-07 22:43:17,929 Connection to 10.111.45.51:5672 failed: timeout
+2018-01-07 22:48:29,044 Added: {'callback': <bound method Connection._on_connection_error of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>>, 'one_shot': False, 'only': None, 'arguments': None}
+2018-01-07 22:48:29,044 Added: {'callback': <bound method Connection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+2018-01-07 22:48:29,052 Connecting to 10.111.45.51:5672
+2018-01-07 22:48:29,306 Connection to 10.111.45.51:5672 failed: timeout
+2018-01-07 22:48:29,307 Connecting to 10.111.45.51:5672
+2018-01-07 22:48:29,778 Processing 0:Connection.Start
+2018-01-07 22:48:29,778 Processing use of oneshot callback
+2018-01-07 22:48:29,778 0 registered uses left
+2018-01-07 22:48:29,779 Removing callback #0: {'callback': <bound method Connection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+2018-01-07 22:48:29,779 Calling <bound method Connection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>> for "0:Connection.Start"
+2018-01-07 22:48:29,779 Added: {'callback': <bound method Connection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+2018-01-07 22:48:29,977 Processing 0:Connection.Tune
+2018-01-07 22:48:29,977 Processing use of oneshot callback
+2018-01-07 22:48:29,977 0 registered uses left
+2018-01-07 22:48:29,977 Removing callback #0: {'callback': <bound method Connection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+2018-01-07 22:48:29,978 Calling <bound method Connection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>> for "0:Connection.Tune"
+2018-01-07 22:48:29,978 Creating a HeartbeatChecker: 60
+2018-01-07 22:48:29,978 Added: {'callback': <bound method Connection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+2018-01-07 22:48:30,134 Processing 0:Connection.OpenOk
+2018-01-07 22:48:30,135 Processing use of oneshot callback
+2018-01-07 22:48:30,135 0 registered uses left
+2018-01-07 22:48:30,135 Removing callback #0: {'callback': <bound method Connection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+2018-01-07 22:48:30,135 Calling <bound method Connection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>> for "0:Connection.OpenOk"
+2018-01-07 22:48:30,135 Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x10448ada0>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+2018-01-07 22:48:30,135 Opening channel 1
+2018-01-07 22:48:30,136 Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+2018-01-07 22:48:30,136 Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': False, 'only': None, 'arguments': None}
+2018-01-07 22:48:30,136 Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': False, 'only': None, 'arguments': None}
+2018-01-07 22:48:30,136 Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+2018-01-07 22:48:30,136 Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+2018-01-07 22:48:30,397 Processing 1:Channel.OpenOk
+2018-01-07 22:48:30,397 Processing use of oneshot callback
+2018-01-07 22:48:30,397 0 registered uses left
+2018-01-07 22:48:30,397 Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+2018-01-07 22:48:30,397 Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>> for "1:Channel.OpenOk"
+2018-01-07 22:48:30,409 Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'notifications.info'}, 'calls': 1}
+2018-01-07 22:48:30,676 Processing 1:Queue.DeclareOk
+2018-01-07 22:48:30,676 Processing use of oneshot callback
+2018-01-07 22:48:30,676 0 registered uses left
+2018-01-07 22:48:30,676 Comparing {'queue': 'notifications.info'} to {'queue': 'notifications.info'}
+2018-01-07 22:48:30,676 Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'notifications.info'}, 'calls': 0}
+2018-01-07 22:48:30,676 Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>> for "1:Queue.DeclareOk"
+2018-01-07 22:48:30,687 Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag1.3116ce6b81c746f991e7ff5d95d1ec47'}, 'calls': 1}
+2018-01-07 22:48:30,942 Processing 1:Basic.ConsumeOk
+2018-01-07 22:48:30,942 Processing use of oneshot callback
+2018-01-07 22:48:30,943 0 registered uses left
+2018-01-07 22:48:30,943 Comparing {'consumer_tag': 'ctag1.3116ce6b81c746f991e7ff5d95d1ec47'} to {'consumer_tag': 'ctag1.3116ce6b81c746f991e7ff5d95d1ec47'}
+2018-01-07 22:48:30,943 Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag1.3116ce6b81c746f991e7ff5d95d1ec47'}, 'calls': 0}
+2018-01-07 22:48:30,943 Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x106ac3860>> for "1:Basic.ConsumeOk"
+2018-01-07 22:48:30,955 Discarding frame <METHOD(['channel_number=1', 'frame_type=1', "method=<Basic.ConsumeOk(['consumer_tag=ctag1.3116ce6b81c746f991e7ff5d95d1ec47'])>"])>
+2018-01-07 22:48:37,548 b'{"_context_domain": null, "_context_roles": [], "event_type": "audit.http.response", "_context_request_id": "req-51f742af-55c5-4ffa-b467-3188e49a93df", "timestamp": "2018-01-07 19:48:37.472376", "_unique_id": "12079bab53ed4d1286aaf006c39b0723", "_context_resource_uuid": null, "_context_is_admin_project": true, "payload": {"typeURI": "http://schemas.dmtf.org/cloud/audit/1.0/event", "eventTime": "2018-01-07T19:48:37.421234+0000", "target": {"typeURI": "service/compute/os-services", "addresses": [{"url": "https://10.111.45.3:8774/v2.1/0ad98db2d949439bb00a31254fdf163d", "name": "admin"}, {"url": "https://10.111.45.3:8774/v2.1/0ad98db2d949439bb00a31254fdf163d", "name": "private"}, {"url": "https://o.dorukcloud.com:8774/v2.1/0ad98db2d949439bb00a31254fdf163d", "name": "public"}], "name": "nova", "id": "nova"}, "observer": {"id": "target"}, "tags": ["correlation_id?value=2b8f782d-67b8-5728-8dfd-3bc00c4a4802"], "eventType": "activity", "initiator": {"typeURI": "service/security/account/user", "name": "nova", "credential": {"token": "a93e xxxxxxxx db3f", "identity_status": "Confirmed"}, "host": {"agent": "python-novaclient", "address": "10.111.45.53"}, "project_id": "0ad98db2d949439bb00a31254fdf163d", "id": "bd2a1c47f147451db830dd8cb32a7806"}, "reason": {"reasonCode": "200", "reasonType": "HTTP"}, "reporterchain": [{"reporterTime": "2018-01-07T19:48:37.471327+0000", "role": "modifier", "reporter": {"id": "target"}}], "action": "read/list", "outcome": "success", "id": "2db5663d-4e76-5dda-a9ca-de7642a05b4f", "requestPath": "/v2.1/0ad98db2d949439bb00a31254fdf163d/os-services?host=helion-cp1-c1-m2-mgmt"}, "_context_auth_token": null, "_context_user_identity": "- - - - -", "_context_show_deleted": false, "_context_tenant": null, "priority": "INFO", "_context_read_only": false, "_context_is_admin": true, "_context_project_domain": null, "_context_user": null, "_context_user_domain": null, "publisher_id": "nova-api", "message_id": "a15ce415-f794-424a-b595-d2d5af3e0ad6"}'
