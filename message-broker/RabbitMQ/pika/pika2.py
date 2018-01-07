@@ -7,7 +7,7 @@ import pika
 logging.basicConfig(filename="logs/pika.log",level="DEBUG",format='%(asctime)s %(message)s')
 
 # Provide username and pass , for Openstack check nova.conf for it
-credentials = pika.PlainCredentials('rmq_nova_user', '2UhCFjnvHPk')
+credentials = pika.PlainCredentials('rmq_nova_user', 'xyxrwrwwr')
 # Provide ip address of RabbitMQ Server , port , vhost and credentials
 connection_parameters = pika.ConnectionParameters('10.111.45.51',5672,'/',credentials)
 # Make connection
